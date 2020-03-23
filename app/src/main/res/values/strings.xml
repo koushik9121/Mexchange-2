@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyApplication</string>
+    <array name="category">
+        <item>Badminton Racquet</item>
+        <item>Shoes</item>
+    </array>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShoesGiveActivity">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/mobile_get"
+        android:layout_marginTop="100dp"
+        android:hint="Mobile No"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/product_description"
+        android:layout_below="@id/mobile_get"
+        android:layout_marginTop="50dp"
+        android:hint="Product Description"/>
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="ADD"
+        android:id="@+id/add_product"
+        android:layout_below="@id/product_description"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"/>
+
+
+</RelativeLayout>

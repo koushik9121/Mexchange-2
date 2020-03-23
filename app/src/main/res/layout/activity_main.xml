@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BADMINTON GIVE"
+        android:layout_marginTop="100dp"
+        android:id="@+id/badminton_give"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GET BADMINTON"
+        android:layout_below="@id/badminton_give"
+        android:id="@+id/badminton_get"
+        android:layout_marginTop="50dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/badminton_get"
+        android:layout_marginTop="100dp"
+        android:id="@+id/shoes_give"
+        android:text="Give shoes"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GET SHOES"
+        android:id="@+id/shoes_get"
+        android:layout_below="@id/shoes_give"
+        android:layout_marginTop="50dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:id="@+id/logout"
+        android:layout_below="@id/shoes_get"
+        android:layout_marginTop="100dp"/>
+</RelativeLayout>
