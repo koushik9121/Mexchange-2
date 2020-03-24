@@ -14,8 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="113dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginStart="93dp"
+        android:layout_marginTop="391dp"
         android:text="@string/register" />
 
     <Button
@@ -24,19 +24,21 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="227dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginStart="190dp"
+        android:layout_marginTop="391dp"
         android:text="@string/login" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/register"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="125dp"
-        android:layout_marginTop="322dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="352dp"
+        android:layout_marginBottom="68dp"
         android:text="Welcome to MeXchange!"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
@@ -44,10 +46,9 @@
         android:id="@+id/imageView2"
         android:layout_width="128dp"
         android:layout_height="134dp"
-        android:layout_alignBottom="@+id/textView"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="155dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginStart="118dp"
+        android:layout_marginTop="199dp"
         app:srcCompat="@drawable/logo2" />
 </RelativeLayout>
