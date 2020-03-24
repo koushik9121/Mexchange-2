@@ -23,6 +23,8 @@ public class ShoesGiveActivity extends AppCompatActivity {
 
     EditText mobile;
     EditText product_desc;
+    EditText name;
+    EditText userid;
     Button add;
     DatabaseReference ref;
     FirebaseAuth auth;
@@ -32,6 +34,8 @@ public class ShoesGiveActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shoes_give);
 
+        name=findViewById(R.id.editText);
+        userid=findViewById(R.id.editText2);
         pd=new ProgressDialog(this);
         mobile=findViewById(R.id.mobile_get);
         product_desc=findViewById(R.id.product_description);
@@ -43,21 +47,24 @@ public class ShoesGiveActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String mobile_txt=mobile.getText().toString();
                 String product_txt=product_desc.getText().toString();
-
-                addProduct(mobile_txt,product_txt);
+                String name_txt=name.getText().toString();
+                String userid_txt=userid.getText().toString();
+                addProduct(name_txt,userid_txt,mobile_txt,product_txt);
             }
         });
 
     }
 
-    private void addProduct(String mobile,String product){
+    private void addProduct(String name,String userid,String mobile,String product){
         pd.setMessage("Adding Product");
         pd.show();
         HashMap<String,Object> map= new HashMap<>();
+        map.put("name",name);
+        map.put("userid",userid);
         map.put("mobile",mobile);
         map.put("product description",product);
 
-        ref.child("shoes").child(auth.getCurrentUser().getUid()).push().setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+        ref.child("game_controller").child(auth.getCurrentUser().getUid()).push().setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful()){

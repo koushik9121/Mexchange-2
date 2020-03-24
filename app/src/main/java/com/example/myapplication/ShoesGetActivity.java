@@ -35,10 +35,12 @@ public class ShoesGetActivity extends AppCompatActivity {
         final ArrayList<String> list_inner=new ArrayList<>();
         final ArrayList<String> list_outer=new ArrayList<>();
         final ArrayList<String> mobile=new ArrayList<>();
+        final ArrayList<String> names=new ArrayList<>();
+        final ArrayList<String> userids=new ArrayList<>();
         final ArrayAdapter adapter=new ArrayAdapter<String>(this,R.layout.list_item,list);
         listView.setAdapter(adapter);
 
-        ref= FirebaseDatabase.getInstance().getReference().child("shoes");
+        ref= FirebaseDatabase.getInstance().getReference().child("game_controller");
         ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -48,11 +50,15 @@ public class ShoesGetActivity extends AppCompatActivity {
                         String s=snapshot.getKey();
                         String key=k.getKey();
                         String mob=k.child("mobile").getValue().toString();
+                        String name=k.child("name").getValue().toString();
+                        String userid=k.child("userid").getValue().toString();
                         final String productdesc = k.child("product description").getValue().toString();
                         list.add(productdesc);
                         list_inner.add(key);
                         mobile.add(mob);
                         list_outer.add(s);
+                        names.add(name);
+                        userids.add(userid);
                     }
                 }
                 adapter.notifyDataSetChanged();
@@ -71,12 +77,16 @@ public class ShoesGetActivity extends AppCompatActivity {
                 String s=list_outer.get(position);
                 String key=list_inner.get(position);
                 String mobile_no=mobile.get(position);
+                String name=names.get(position);
+                String userid=userids.get(position);
                 ref.child(s).child(key).removeValue();
                 Toast.makeText(ShoesGetActivity.this,"Product successfully Received",Toast.LENGTH_SHORT).show();
                 adapter.remove(item);
                 adapter.notifyDataSetChanged();
                 Intent intent=new Intent(ShoesGetActivity.this,ContactActivity.class);
                 intent.putExtra("mobile",mobile_no);
+                intent.putExtra("name",name);
+                intent.putExtra("userid",userid);
                 startActivity(intent);
 
             }

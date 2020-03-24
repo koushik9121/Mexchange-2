@@ -23,6 +23,8 @@ import java.util.HashMap;
 public class BadGiveActivity extends AppCompatActivity {
 
     Button add_product;
+    EditText name;
+    EditText userid;
     EditText product_description;
     EditText mobile;
     DatabaseReference ref;
@@ -33,6 +35,8 @@ public class BadGiveActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bad_give);
 
+        name=findViewById(R.id.editText);
+        userid=findViewById(R.id.editText2);
         pd=new ProgressDialog(this);
         add_product=findViewById(R.id.add_product);
         product_description=findViewById(R.id.product_description);
@@ -44,15 +48,19 @@ public class BadGiveActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String mobile_txt=mobile.getText().toString();
                 String product_txt=product_description.getText().toString();
-                addProduct(mobile_txt,product_txt);
+                String name_txt=name.getText().toString();
+                String userid_txt=userid.getText().toString();
+                addProduct(name_txt,userid_txt,mobile_txt,product_txt);
             }
         });
     }
 
-    private void addProduct(String mobile,String product){
+    private void addProduct(String name,String userid,String mobile,String product){
         pd.setMessage("Adding Product");
         pd.show();
         HashMap<String,Object> map=new HashMap<>();
+        map.put("name",name);
+        map.put("userid",userid);
         map.put("mobile",mobile);
         map.put("product description",product);
         ref.child("badminton").child(auth.getCurrentUser().getUid()).push().setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {

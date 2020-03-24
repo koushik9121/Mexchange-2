@@ -8,15 +8,23 @@ import android.widget.TextView;
 
 public class ContactActivity extends AppCompatActivity {
 
-    TextView text;
+    TextView mobile;
+    TextView name;
+    TextView userid;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact);
 
-        text=findViewById(R.id.text);
+        name=findViewById(R.id.name);
+        userid=findViewById(R.id.userid);
+        mobile=findViewById(R.id.mobile);
         Intent intent= getIntent();
-        String mobile=intent.getExtras().getString("mobile");
-        text.setText("Contact +91-"+mobile+" for further information");
+        String mobile_txt=intent.getExtras().getString("mobile");
+        String name_txt=intent.getExtras().getString("name");
+        String userid_txt=intent.getExtras().getString("userid");
+        name.setText("Offered by "+name_txt);
+        userid.setText("Roll No: "+userid_txt);
+        mobile.setText("Contact +91-"+mobile_txt+" for further information");
     }
 }

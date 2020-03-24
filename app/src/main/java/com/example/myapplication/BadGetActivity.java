@@ -37,6 +37,8 @@ public class BadGetActivity extends AppCompatActivity {
         final ArrayList<String> list_outer=new ArrayList<>();
         final ArrayList<String> list_inner=new ArrayList<>();
         final ArrayList<String> mobile_list=new ArrayList<>();
+        final ArrayList<String> names=new ArrayList<>();
+        final ArrayList<String> userids=new ArrayList<>();
         final ArrayAdapter adapter=new ArrayAdapter<String>(this,R.layout.list_item,list);
         listView.setAdapter(adapter);
 
@@ -52,9 +54,13 @@ public class BadGetActivity extends AppCompatActivity {
                         String s=snapshot.getKey();
                         String key=k.getKey();
                         String mob=k.child("mobile").getValue().toString();
+                        String name=k.child("name").getValue().toString();
+                        String userid=k.child("userid").getValue().toString();
                         list_outer.add(s);
                         list_inner.add(key);
                         mobile_list.add(mob);
+                        names.add(name);
+                        userids.add(userid);
                         final String product_desc = k.child("product description").getValue().toString();
                         list.add(product_desc);
                     }
@@ -75,12 +81,16 @@ public class BadGetActivity extends AppCompatActivity {
                 String s=list_outer.get(position);
                 String key=list_inner.get(position);
                 String mobile=mobile_list.get(position);
+                String name=names.get(position);
+                String userid=userids.get(position);
                 ref.child(s).child(key).removeValue();
                 adapter.remove(item);
                 adapter.notifyDataSetChanged();
                 Toast.makeText(BadGetActivity.this,"Product successfully Requested",Toast.LENGTH_SHORT).show();
                 Intent intent=new Intent(BadGetActivity.this,ContactActivity.class);
                 intent.putExtra("mobile",mobile);
+                intent.putExtra("name",name);
+                intent.putExtra("userid",userid);
                 startActivity(intent);
             }
         });
