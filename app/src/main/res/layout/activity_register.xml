@@ -4,33 +4,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".RegisterActivity">
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Email"
         android:id="@+id/email"
-        android:layout_marginTop="100dp"/>
-    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Roll No"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="201dp"
+        android:layout_marginEnd="0dp"
+        android:hint="Email" />
+
+    <EditText
         android:id="@+id/roll_no"
-        android:layout_below="@id/email"
-        android:layout_marginTop="50dp"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="395dp"
+        android:layout_marginEnd="0dp"
+        android:hint="Roll No" />
+
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/roll_no"
-        android:hint="Password"
         android:id="@+id/password"
-        android:layout_marginTop="50dp"/>
-    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Register"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="297dp"
+        android:layout_marginEnd="4dp"
+        android:hint="Password" />
+
+    <Button
         android:id="@+id/register"
-        android:layout_below="@id/password"
-        android:layout_marginTop="50dp"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-8dp"
+        android:layout_marginTop="514dp"
+        android:layout_marginEnd="6dp"
+        android:text="Register" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="82dp"
+        android:text="Create your account!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="36sp" />
 </RelativeLayout>

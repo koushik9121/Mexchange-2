@@ -4,40 +4,178 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
-    <Button
-        android:layout_width="match_parent"
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="BADMINTON GIVE"
-        android:layout_marginTop="100dp"
-        android:id="@+id/badminton_give"/>
-    <Button
-        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="#FFFFFF"
+        android:elevation="20dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp"
+        app:cardMaxElevation="30dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="195dp"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="84dp"
+                android:layout_marginEnd="67dp"
+                android:text="Barter Points: 100"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="61dp"
+                android:text="Badminton Racket "
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="120dp"
+                android:layout_height="156dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="18dp"
+                app:srcCompat="@drawable/badminton" />
+
+            <Button
+                android:id="@+id/badminton_get"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="20dp"
+                android:text="GET " />
+
+            <Button
+                android:id="@+id/badminton_give"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="9dp"
+                android:layout_marginEnd="130dp"
+                android:layout_marginBottom="20dp"
+                android:text="Give" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="GET BADMINTON"
-        android:layout_below="@id/badminton_give"
-        android:id="@+id/badminton_get"
-        android:layout_marginTop="50dp"/>
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="288dp"
+        android:layout_marginEnd="30dp"
+        android:background="#FFFFFF"
+        android:elevation="20dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp"
+        app:cardMaxElevation="30dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="194dp"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="84dp"
+                android:layout_marginEnd="67dp"
+                android:text="Barter Points: 200"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="53dp"
+                android:layout_marginEnd="84dp"
+                android:text="Game Controller "
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="120dp"
+                android:layout_height="156dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="18dp"
+                app:srcCompat="@drawable/joystick" />
+
+            <Button
+                android:id="@+id/shoes_get"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="20dp"
+                android:text="GET " />
+
+            <Button
+                android:id="@+id/shoes_give"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="9dp"
+                android:layout_marginEnd="130dp"
+                android:layout_marginBottom="20dp"
+                android:text="Give" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/badminton_get"
-        android:layout_marginTop="100dp"
-        android:id="@+id/shoes_give"
-        android:text="Give shoes"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="GET SHOES"
-        android:id="@+id/shoes_get"
-        android:layout_below="@id/shoes_give"
-        android:layout_marginTop="50dp"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Logout"
         android:id="@+id/logout"
-        android:layout_below="@id/shoes_get"
-        android:layout_marginTop="100dp"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="22dp"
+        android:shadowColor="#FFFFFF"
+        android:shadowRadius="5"
+        android:text="Logout"
+        android:textColor="@android:color/holo_red_dark"
+        android:textColorHighlight="#913232"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:textColorLink="#DA6D6D" />
+
 </RelativeLayout>

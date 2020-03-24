@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">MyApplication</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
     <array name="category">
         <item>Badminton Racquet</item>
         <item>Shoes</item>
