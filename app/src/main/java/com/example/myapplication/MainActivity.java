@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     Button shoesgive;
     Button shoesget;
     Button logout;
+    Button requests;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         shoesgive=findViewById(R.id.shoes_give);
         shoesget=findViewById(R.id.shoes_get);
         logout=findViewById(R.id.logout);
+        requests=findViewById(R.id.all_requests);
         badgive.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,6 +59,12 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this,"Logged Out Successfully",Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this,StartActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP));
                 finish();
+            }
+        });
+        requests.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,RequestsActivity.class));
             }
         });
     }

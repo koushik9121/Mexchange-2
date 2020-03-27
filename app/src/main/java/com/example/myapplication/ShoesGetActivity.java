@@ -79,14 +79,17 @@ public class ShoesGetActivity extends AppCompatActivity {
                 String mobile_no=mobile.get(position);
                 String name=names.get(position);
                 String userid=userids.get(position);
-                ref.child(s).child(key).removeValue();
-                Toast.makeText(ShoesGetActivity.this,"Product successfully Received",Toast.LENGTH_SHORT).show();
-                adapter.remove(item);
-                adapter.notifyDataSetChanged();
+                //ref.child(s).child(key).removeValue();
+                //Toast.makeText(ShoesGetActivity.this,"Product successfully Received",Toast.LENGTH_SHORT).show();
+                //adapter.remove(item);
+                //adapter.notifyDataSetChanged();
                 Intent intent=new Intent(ShoesGetActivity.this,ContactActivity.class);
                 intent.putExtra("mobile",mobile_no);
                 intent.putExtra("name",name);
                 intent.putExtra("userid",userid);
+                intent.putExtra("requested_from",s);
+                intent.putExtra("requested_item",key);
+                intent.putExtra("item_desc",item);
                 startActivity(intent);
 
             }

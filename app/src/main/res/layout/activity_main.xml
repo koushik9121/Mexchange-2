@@ -158,6 +158,22 @@
     </androidx.cardview.widget.CardView>
 
     <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/all_requests"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="26dp"
+        android:layout_marginBottom="22dp"
+        android:shadowColor="#FFFFFF"
+        android:shadowRadius="5"
+        android:text="Requests"
+        android:textColor="@android:color/holo_red_dark"
+        android:textColorHighlight="#913232"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:textColorLink="#DA6D6D"/>
+
+    <Button
         android:id="@+id/logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

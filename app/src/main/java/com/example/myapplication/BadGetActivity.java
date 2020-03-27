@@ -78,19 +78,22 @@ public class BadGetActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String item=adapter.getItem(position).toString();
-                String s=list_outer.get(position);
-                String key=list_inner.get(position);
+                String requested_from=list_outer.get(position);
+                String requested_item=list_inner.get(position);
                 String mobile=mobile_list.get(position);
                 String name=names.get(position);
                 String userid=userids.get(position);
-                ref.child(s).child(key).removeValue();
-                adapter.remove(item);
-                adapter.notifyDataSetChanged();
-                Toast.makeText(BadGetActivity.this,"Product successfully Requested",Toast.LENGTH_SHORT).show();
+                //ref.child(s).child(key).removeValue();
+                //adapter.remove(item);
+                //adapter.notifyDataSetChanged();
+                //Toast.makeText(BadGetActivity.this,"Product successfully Requested",Toast.LENGTH_SHORT).show();
                 Intent intent=new Intent(BadGetActivity.this,ContactActivity.class);
                 intent.putExtra("mobile",mobile);
                 intent.putExtra("name",name);
                 intent.putExtra("userid",userid);
+                intent.putExtra("requested_from",requested_from);
+                intent.putExtra("requested_item",requested_item);
+                intent.putExtra("item_desc",item);
                 startActivity(intent);
             }
         });
