@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
+    android:backgroundTint="#B12323"
     tools:context=".StartActivity">
 
     <Button
@@ -16,6 +17,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="93dp"
         android:layout_marginTop="391dp"
+        android:backgroundTint="#FFFFFF"
         android:text="@string/register" />
 
     <Button
@@ -26,6 +28,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="190dp"
         android:layout_marginTop="391dp"
+        android:backgroundTint="#FFFFFF"
         android:text="@string/login" />
 
     <TextView
@@ -40,7 +43,8 @@
         android:layout_marginTop="352dp"
         android:layout_marginBottom="68dp"
         android:text="Welcome to MeXchange!"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#FFFFFF" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -50,5 +54,6 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="118dp"
         android:layout_marginTop="199dp"
+        android:backgroundTint="#B12323"
         app:srcCompat="@drawable/logo2" />
 </RelativeLayout>

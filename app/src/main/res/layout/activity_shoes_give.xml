@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:padding="5dp"
-    android:background="#FFFFFF">
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#B12323"
+    android:padding="5dp">
+
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="50dp"
             android:background="#FFFFFF"
             tools:context=".ShoesGiveActivity">
 
@@ -38,9 +43,11 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="138dp"
                 android:layout_marginEnd="4dp"
+                android:backgroundTint="#B12323"
                 android:ems="10"
                 android:hint="Name "
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:textColorHint="#0E0303" />
 
             <EditText
                 android:id="@+id/editText2"
@@ -52,9 +59,11 @@
                 android:layout_marginStart="17dp"
                 android:layout_marginTop="222dp"
                 android:layout_marginEnd="0dp"
+                android:backgroundTint="#B12323"
                 android:ems="10"
                 android:hint="UserID"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:textColorHint="#0B0303" />
 
             <EditText
                 android:id="@+id/product_description"
@@ -64,7 +73,9 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="17dp"
                 android:layout_marginTop="403dp"
-                android:hint="Product Description" />
+                android:backgroundTint="#B12323"
+                android:hint="Product Description"
+                android:textColorHint="#0B0202" />
 
             <Button
                 android:id="@+id/add_product"
@@ -73,10 +84,14 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginTop="491dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="468dp"
                 android:layout_marginEnd="29dp"
                 android:layout_marginRight="29dp"
-                android:text="ADD" />
+                android:layout_marginBottom="15dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="ADD"
+                android:textColor="#B12323" />
 
             <EditText
                 android:id="@+id/mobile_get"
@@ -88,17 +103,15 @@
                 android:layout_marginStart="17dp"
                 android:layout_marginTop="316dp"
                 android:layout_marginEnd="1dp"
+                android:backgroundTint="#B12323"
                 android:ems="10"
                 android:hint="Mobile No"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:textColorHint="#120404" />
 
 
         </RelativeLayout>
-
-
     </LinearLayout>
 
-
 </ScrollView>
-
 

@@ -17,7 +17,10 @@
         android:layout_marginStart="1dp"
         android:layout_marginTop="201dp"
         android:layout_marginEnd="0dp"
-        android:hint="Email" />
+        android:backgroundTint="#B12323"
+        android:hint="Email"
+        android:textColorHighlight="#B12323"
+        android:textColorHint="#120404" />
 
     <EditText
         android:id="@+id/roll_no"
@@ -29,7 +32,9 @@
         android:layout_marginStart="1dp"
         android:layout_marginTop="395dp"
         android:layout_marginEnd="0dp"
-        android:hint="Roll No" />
+        android:backgroundTint="#B12323"
+        android:hint="Roll No"
+        android:textColorHint="#0E0202" />
 
     <EditText
         android:id="@+id/password"
@@ -42,8 +47,10 @@
         android:layout_marginStart="2dp"
         android:layout_marginTop="297dp"
         android:layout_marginEnd="4dp"
+        android:backgroundTint="#B12323"
+        android:hint="Password"
         android:inputType="textPassword"
-        android:hint="Password" />
+        android:textColorHint="#1C0606" />
 
     <Button
         android:id="@+id/register"
@@ -55,7 +62,8 @@
         android:layout_marginStart="-8dp"
         android:layout_marginTop="514dp"
         android:layout_marginEnd="6dp"
-        android:text="Register" />
+        android:text="Register"
+        android:textColor="#B12323" />
 
     <TextView
         android:id="@+id/textView2"
